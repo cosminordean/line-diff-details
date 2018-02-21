@@ -1,5 +1,5 @@
 {
-  "name": "line-diff-details",
+  "name": "line-diff-details-plus",
   "main": "./lib/line-diff-details",
   "version": "1.9.0",
   "description": "Review/revert individual line changes.",
@@ -13,15 +13,24 @@
     "test": "apm test"
   },
   "activationCommands": {},
-  "repository": "https://github.com/jakesankey/line-diff-details",
+  "repository": "https://github.com/stelonix/line-diff-details",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
   "dependencies": {
-    "atom-space-pen-views": "^2.0.3"
+    "atom-space-pen-views": "^2.0.3",
+    "atom-ts-transpiler": "^1.4.3",
+    "typescript": "^2.7.2"
   },
   "devDependencies": {
     "coffeelint": "1.16.0"
   }
+  ,
+  "atomTranspilers": [
+    {
+      "transpiler": "atom-ts-transpiler",
+      "glob": "{!(node_modules)/**/,}*.ts?(x)"
+    }
+  ]
 }
