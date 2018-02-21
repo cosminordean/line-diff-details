@@ -1,7 +1,7 @@
 {
   "name": "line-diff-details-plus",
   "main": "./lib/line-diff-details",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Review/revert individual line changes.",
   "keywords": [
     "diff",
@@ -25,8 +25,7 @@
   },
   "devDependencies": {
     "coffeelint": "1.16.0"
-  }
-  ,
+  },
   "atomTranspilers": [
     {
       "transpiler": "atom-ts-transpiler",
