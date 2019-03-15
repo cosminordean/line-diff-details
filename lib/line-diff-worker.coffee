@@ -64,7 +64,7 @@ class LineDiffWorker
             )
         else
             messageBubble = new MessageBubble(details.originalContent, =>
-                @editor.setTextInBufferRange([startPoint, endPoint], details.originalContent.slice(0, -1))
+                @editor.setTextInBufferRange([startPoint, endPoint], details.originalContent.replace(/[\r\n]+$/, ''))
             )
         @editor.decorateMarker(marker, {type: "overlay", item: messageBubble, position: "tail"})
         @markers[marker.id] = marker
